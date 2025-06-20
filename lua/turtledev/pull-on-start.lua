@@ -7,9 +7,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
             "pull"
         },
         {
-            env = {
-                GIT_TERMINAL_PROMPT = "0"
-            },
+            env = { GIT_TERMINAL_PROMPT = "0" },
             stdout_buffered = true,
             stderr_buffered = true,
             on_stdout = function(_, stdout)
