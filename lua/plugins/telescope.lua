@@ -3,9 +3,9 @@ return {
     lazy = true,
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
-        { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find file." },
-        { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Search files." },
-        { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffer." }
+        { "<leader>ff", require('telescope.builtin').find_files, desc = "Find file." },
+        { "<leader>fg", require('telescope.builtin').live_grep, desc = "Search files." },
+        { "<leader>fb", require('telescope.builtin').buffers, desc = "Find buffer." }
     },
     config = function ()
         require("telescope").load_extension("fzy_native")
