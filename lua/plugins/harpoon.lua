@@ -11,6 +11,8 @@ return {
         { "<C-a>", function () require("harpoon"):list():select(4) end, desc = "Open harpoon file 4." }
     },
     config = function ()
-        require("harpoon"):setup()
+        require("harpoon"):setup({
+            settings = { save_on_toggle = true, sync_on_ui_close = true }
+        })
     end
 }
